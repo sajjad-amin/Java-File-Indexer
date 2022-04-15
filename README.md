@@ -1,8 +1,22 @@
 # Java File Indexer
 A simple useful library for indexing files in java project
 ### Uses
-Download [FileIndexer.jar](https://github.com/sajjad-amin/Java-File-Indexer/raw/master/out/artifacts/FileIndexer.jar) and add into your project.
-
+Download [FileIndexer.jar](https://github.com/sajjad-amin/Java-File-Indexer/raw/master/out/artifacts/FileIndexer.jar) and add into your project, or you can use it on android project by the following procedure:  
+- Add it in your root build.gradle at the end of repositories:
+```
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+- Step 2. Add the dependency
+```
+dependencies {
+    implementation 'com.github.sajjad-amin:Java-File-Indexer:v1.0.0'
+}
+```
 The base class is **FileIndexer** and it has two static inner class - **FileIndexer.FileInfo**, **FileIndexer.Filter** and two method **indexAll()**, **search()**.
 Both methods are return an ArrayList which contains FileIndexer.FileInfo class.
 
